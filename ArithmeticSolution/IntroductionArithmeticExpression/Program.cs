@@ -52,3 +52,25 @@ Console.WriteLine($"\nThe result of the math expression {doubleA} / {doubleB} is
 doubleC = doubleB / doubleA;
 Console.WriteLine($"\nThe result of the math expression {doubleB} / {doubleA} is: {doubleC}\n");
 
+Console.WriteLine("\n\nCalculate an average\n");
+
+double calculatedAverage = 0.0;
+double numOne, numTwo, numThree;
+string inputValue;
+
+Console.Write("Enter your first number:\t");
+inputValue = Console.ReadLine();
+numOne = double.Parse(inputValue);
+Console.Write("Enter your second number:\t");
+inputValue = Console.ReadLine();
+numTwo = double.Parse(inputValue);
+Console.Write("Enter your third number:\t");
+inputValue = Console.ReadLine();
+numThree = double.Parse(inputValue);
+
+calculatedAverage = (numOne + numTwo + numThree) / 3;
+
+Console.WriteLine($"\nThe average of ({numOne}, {numTwo}, {numThree}) is: {calculatedAverage}");
+Console.WriteLine($"The average of ({numOne}, {numTwo}, {numThree}) is: {calculatedAverage.ToString("F2")}");
+Console.WriteLine($"The average of ({numOne}, {numTwo}, {numThree}) is: {calculatedAverage.ToString("#,##0.00")}");
+Console.WriteLine($"The average of ({numOne}, {numTwo}, {numThree}) is: {Math.Round(calculatedAverage,2)}");
