@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nested_IF", "Nested_IF\Nest
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Branch_IF", "Branch_IF\Branch_IF.csproj", "{191AACC7-E54B-4E03-8BCC-1D093E02272C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwitchDecisions", "SwitchDecisions\SwitchDecisions.csproj", "{EE303EAC-4AE4-48EA-BAAB-150834E00B9C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{191AACC7-E54B-4E03-8BCC-1D093E02272C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{191AACC7-E54B-4E03-8BCC-1D093E02272C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{191AACC7-E54B-4E03-8BCC-1D093E02272C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE303EAC-4AE4-48EA-BAAB-150834E00B9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE303EAC-4AE4-48EA-BAAB-150834E00B9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE303EAC-4AE4-48EA-BAAB-150834E00B9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE303EAC-4AE4-48EA-BAAB-150834E00B9C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
