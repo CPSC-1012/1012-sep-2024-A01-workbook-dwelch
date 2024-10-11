@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IterationBasics", "Iteratio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "Calculator\Calculator.csproj", "{34C37C0F-A0B9-490F-A41E-09BCD6F5645F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormatOutput", "FormatOutput\FormatOutput.csproj", "{A51B5737-1687-4572-94FD-5ACDFD4A846D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{34C37C0F-A0B9-490F-A41E-09BCD6F5645F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{34C37C0F-A0B9-490F-A41E-09BCD6F5645F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{34C37C0F-A0B9-490F-A41E-09BCD6F5645F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A51B5737-1687-4572-94FD-5ACDFD4A846D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A51B5737-1687-4572-94FD-5ACDFD4A846D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A51B5737-1687-4572-94FD-5ACDFD4A846D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A51B5737-1687-4572-94FD-5ACDFD4A846D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
