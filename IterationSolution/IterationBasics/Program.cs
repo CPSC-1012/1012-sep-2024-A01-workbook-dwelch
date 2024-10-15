@@ -51,6 +51,8 @@ while(mySquare < 1)
     //input my square number and continue looping until a valid number is entered
     Console.Write("Enter a positive whole number to create a sum of squares:\t");
     inputValue = Console.ReadLine();
+    //defensive validation where the check is done before the data is attempted to
+    //  be used in the expected proper format
     if (!int.TryParse(inputValue, out mySquare))
     {
         Console.WriteLine($"\tYour input of >{inputValue}< is not valid. Try again.");
@@ -58,6 +60,8 @@ while(mySquare < 1)
     }
     else
     {
+        //limit or range validation
+        //is the data value in the expected domain
         if (mySquare < 1)
         {
             Console.WriteLine($"\tYour input of >{mySquare}< is not a positive whole number. Try again.");
