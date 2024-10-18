@@ -45,11 +45,11 @@ for (int index = 0; index < PHYSICALSIZE; index++)
 }
 
 //traverse (walk through the array) the array display each array element
-Console.WriteLine("Original array load\n");
-for (int index =0; index < PHYSICALSIZE; index++)
-{
-    Console.WriteLine($"The grade at index {index} is the {index + 1}th element and is {grades[index]}");
-}
+//Console.WriteLine("Original array load\n");
+//for (int index =0; index < PHYSICALSIZE; index++)
+//{
+//    Console.WriteLine($"The grade at index {index} is the {index + 1}th element and is {grades[index]}");
+//}
 
 //declaring the array size by supplying a set of values on the declaring statement
 //when you supply a set of values, the system automatically set the size of your array
@@ -76,7 +76,7 @@ Array.Sort(grades);
 //Console.WriteLine("\nDefault ascending sorted array\n");
 for (int index = 0; index < PHYSICALSIZE; index++)
 {
-  //  Console.WriteLine($"The grade at index {index} is the {index + 1}th element and is {grades[index]}");
+    Console.WriteLine($"The grade at index {index} is the {index + 1}th element and is {grades[index]}");
 }
 
 //Are the other ways to sort, such as descending
@@ -95,22 +95,102 @@ for (int index = 0; index < PHYSICALSIZE; index++)
 //}
 
 //sort descending
-Array.Sort(grades, (x, y) => y.CompareTo(x)); //compare y to x in an descending sort
-for (int index = 0; index < PHYSICALSIZE; index++)
-{
-   // Console.WriteLine($"The grade at index {index} is the {index + 1}th element and is {grades[index]}");
-}
+//Array.Sort(grades, (x, y) => y.CompareTo(x)); //compare y to x in an descending sort
+//for (int index = 0; index < PHYSICALSIZE; index++)
+//{
+//   // Console.WriteLine($"The grade at index {index} is the {index + 1}th element and is {grades[index]}");
+//}
 
 //What about resetting the array (reset to 0)
 //manually do it
-Console.WriteLine("\nResetting the array to default values\n");
+//Console.WriteLine("\nResetting the array to default values\n");
 //for (int index = 0; index < PHYSICALSIZE; index++)
 //{
 //    grades[index] = 0;
 //}
 
-Array.Clear(grades);
-for (int index = 0; index < PHYSICALSIZE; index++)
+//Array.Clear(grades);
+//for (int index = 0; index < PHYSICALSIZE; index++)
+//{
+//     Console.WriteLine($"The grade at index {index} is the {index + 1}th element and is {grades[index]}");
+//}
+
+//locating items within yur array collection
+Console.WriteLine("\nLocating values within an array\n");
+
+//there are several techniques for locating an item in your collection
+// a) traverse the whole collection: counter loop -> for
+// b) traverse until the value is located (quick exit): sentinal loop -> while
+// c) using built-in methods
+
+//obtain the search arg value from the user
+Console.Write("\n\tEnter the value to locate:\t");
+int searchArg = int.Parse(Console.ReadLine()); //assuming valid data
+
+//option a
+bool found = false; //assume that the data is NOT in the collection
+int foundIndex = -1; //invalid index, index start at 0, this will hold the location of the value in the array
+for (int index = 0; index < grades.Length; index++) //you could have used PHYSICALSIZE
 {
-     Console.WriteLine($"The grade at index {index} is the {index + 1}th element and is {grades[index]}");
+    if(searchArg == grades[index])
+    {
+        found = true;
+        foundIndex = index;
+        //can one do a quick exit??
+        //yes
+        index = grades.Length; //set your counter to its max value
+    }
+}
+if (found)
+{
+    Console.WriteLine($"\nYour serach for {searchArg} was successful. It was found at element {foundIndex + 1}.");
+}
+else
+{
+    Console.WriteLine($"\nYour serach for {searchArg} was unsuccessful. It was not found.");
+}
+
+//option b
+found = false;
+foundIndex = -1;
+int quickIndex = 0; //using the while requires the coder to manage the iteration
+while (!found && quickIndex < PHYSICALSIZE)  //could have used grades.Length
+{
+    if (searchArg == grades[quickIndex])
+    {
+        found = true;
+        foundIndex = quickIndex;
+    }
+    quickIndex++;
+}
+Console.WriteLine($"\n\tExiting the loop at index {quickIndex--}\n"); //proof of quick exit
+if (found)
+{
+    Console.WriteLine($"\nYour serach for {searchArg} was successful. It was found at element {foundIndex + 1}.");
+}
+else
+{
+    Console.WriteLine($"\nYour serach for {searchArg} was unsuccessful. It was not found.");
+}
+
+//option c
+//Array has a method that will do the search for you
+//Array FindIndex(arrayname, predicate)
+//predicate syntax: x => condition
+// where x represents any element in the array
+// => lamda symbol (read as: do the following)
+//predicate which is the condition to execute for the current element of the array
+//what is returned
+//  not found returns -1
+//  found returns the index of the FIRST element satisfying the predicate
+
+foundIndex = -1;
+foundIndex = Array.FindIndex(grades, x => x == searchArg);
+if (foundIndex >= 0)
+{
+    Console.WriteLine($"\nYour serach for {searchArg} was successful. It was found at element {foundIndex + 1}.");
+}
+else
+{
+    Console.WriteLine($"\nYour serach for {searchArg} was unsuccessful. It was not found.");
 }
