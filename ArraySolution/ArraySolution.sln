@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DiscoveringArrays", "Discov
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PartialArrayFilling", "PartialArrayFilling\PartialArrayFilling.csproj", "{FA9AAEFF-EFFD-41B7-BDB3-DB71F8382B34}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParallelArrays", "ParallelArrays\ParallelArrays.csproj", "{561800E9-2F5E-477B-B9C0-677D1EB98FEE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{FA9AAEFF-EFFD-41B7-BDB3-DB71F8382B34}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA9AAEFF-EFFD-41B7-BDB3-DB71F8382B34}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA9AAEFF-EFFD-41B7-BDB3-DB71F8382B34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{561800E9-2F5E-477B-B9C0-677D1EB98FEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{561800E9-2F5E-477B-B9C0-677D1EB98FEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{561800E9-2F5E-477B-B9C0-677D1EB98FEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{561800E9-2F5E-477B-B9C0-677D1EB98FEE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
