@@ -65,6 +65,15 @@ Array.Sort(names, marks, 0, logicalSize);
 //  value is any valid C# value
 //  the order of values MUST match the expectd order defined by the method
 //  the value MUST be of the expected datatype of the parameter defined by the method
+
+//NOTE: value type variable pass a COPY of their value to the method
+//      value type variable CANNOT be alter in the method and return via the parameter list
+//          the value would need to be return via the returndatatype value.
+//      reference type variables pass the memory addres as a copy to the method
+//      the actual contains of a reference type variable (ie array) can be altered
+//          in the method AND upon returning to your driver routine, the altered
+//          data will still be within the array
+//      EXCEPTION: strings
 DisplayClass(names, marks, logicalSize);
 CalculateAverage(logicalSize, marks);
 HighestStudentMark(marks, names);

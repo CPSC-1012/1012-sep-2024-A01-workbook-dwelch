@@ -29,22 +29,37 @@ switch (choice.ToUpper())
 {
     case "A":
         {
-            Console.WriteLine("Add");
+            results = num1 + num2;
+            symbol = "+";
+            valid = true;
             break;
         }
     case "B":
         {
-            Console.WriteLine("subtract");
+            results = num1 - num2;
+            symbol = "-";
+            valid = true;
             break;
         }
     case "C":
         {
-            Console.WriteLine("multiple");
+            results = num1 * num2;
+            symbol = "*";
+            valid = true;
             break;
         }
     case "D":
         {
-            Console.WriteLine("division");
+            if (num2 != 0)
+            {
+                results = num1 / num2;
+                symbol = "/";
+                valid = true;
+            }
+            else
+            {
+                Console.WriteLine("\n\tDivision by zero (0) is not a valid operation.\n");
+            }
             break;
         }
     default:
@@ -66,25 +81,55 @@ static void DisplayMenu()
     //a method stub is the method header and any possible return statement
 
     //later you can add the code for your method
-    Console.WriteLine("\nChoice the calculation to preform.");
+    Console.WriteLine("\nChoice the whole number calculation to preform.");
     Console.WriteLine("a) ADD.");
     Console.WriteLine("b) Subtract.");
     Console.WriteLine("c) Multiple.");
-    Console.WriteLine("d) Divsion.");
+    Console.WriteLine("d) Division.");
     Console.Write("Enter your calculation choice:\t");
 }
 
 //int GetNumber(string prompt) : this will retreive a numeric value from the user and return the number
 static int GetNumber(string prompt)
 {
-    return 0;
+    //this method will retreive a numeric from the user
+    //validate the incoming value is a number
+    //this method will continue to execute until a user enters a number
+    bool validFlag = false; //I assume the data is invalid
+    string inputValue = "";
+    int number = 0;
+
+    while (!validFlag)
+    {
+       
+        Console.Write($"{prompt}\t");
+        inputValue = Console.ReadLine();
+        if (!int.TryParse(inputValue, out number))
+        {
+            Console.WriteLine($"\tYour input of >{inputValue}< is not valid. Try again.");
+        }
+        else
+        {
+            validFlag = true;
+        }//eof
+    }//eol  end of loop
+    return number;
+
+    //method stub the return statement can contain a valid value
+    //the return will be updated when you actually complete the coding
+    //return 0;
 }
 
 //void DisplayResults(int num1, int num2, double results, bool valid, string symbol): this will
 //  display the results of the requested calculation
 static void DisplayResults(int num1, int num2, double results, bool valid, string symbol)
 {
-
+    //dsiplay the value entered into the method
+    //valid will indicate if the calculation was successful (division by 0)
+    if(valid)
+    {
+        Console.WriteLine($"{num1} {symbol} {num2} = {results}");
+    }
 }
 
 #endregion
