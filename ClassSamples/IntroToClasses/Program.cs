@@ -20,13 +20,37 @@ myDog = new Dog();
 //to use something within a other class the "something" needs an
 //   access level of public or internal
 myDog.SetName("No");
-myDog.SetAge(4.5);
-DisplayMyPet(myDog);
+//myDog.SetAge(4.5); //this is a behaviour (method)
+myDog.Age = 4.5; //this makes use of a property, 
+                 //a property can be used as "if" it were a variable
+                 //the system recognizes that the property is on the left
+                 //     side of an assignment operation, and therefore
+                 //     knows to used the setter
+
+//demonstrate using a property in Dog that contains validation of the
+//  data which will throw and exception
+
+try
+{
+    myDog.OwnerFirstName = "Lowand";
+    myDog.OwnerLastName = "Behold";
+    DisplayMyPet(myDog);
+}
+catch(Exception ex)
+{
+    Console.WriteLine($"Class data error: {ex.Message}");
+}
+
 
 static void DisplayMyPet(Dog myDog)
     
 {
     //Dog instance contains the data value No.
-    Console.WriteLine($"My dog is called {myDog.GetName()}");
-    Console.WriteLine($"My dog is {myDog.GetAge()} years old.");
+    //Console.WriteLine($"The dog belonging to {myDog.GetFullName()} is called {myDog.GetName()}"); //using methods
+    Console.WriteLine($"The dog belonging to {myDog.FullName} is called {myDog.GetName()}"); //using properties
+    //Console.WriteLine($"My dog is {myDog.GetAge()} years old.");
+    Console.WriteLine($"My dog is {myDog.Age} years old."); //this makes use of a property
+                                                            //the system recognizes that the property is not
+                                                            // part of an assignment operation, and therefore
+                                                            //     knows to used the getter
 }
