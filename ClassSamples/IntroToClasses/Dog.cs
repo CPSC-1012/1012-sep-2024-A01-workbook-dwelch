@@ -165,5 +165,26 @@ namespace Animals
            
             get { return $"{_OwnerLastName}, {OwnerFirstName}"; }
         }
+
+        public string Breed
+        {
+            //accessor
+            get { return _Breed; }
+
+            //mutator
+            set
+            {
+                if (string.IsNullOrWhiteSpace(value))
+                {
+                    //cast an error message
+                    //within a class, casting error messages is done using Exceptions
+                    //if this exception is throw then the processing in the class
+                    //  is terminated and the system returns to where the property
+                    //  was being used.
+                    throw new Exception("You are missing the breed.");
+                }
+                _Breed = value;
+            }
+        }
     }
 }

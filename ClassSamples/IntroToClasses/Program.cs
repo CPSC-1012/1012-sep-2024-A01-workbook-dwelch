@@ -34,6 +34,7 @@ try
 {
     myDog.OwnerFirstName = "Lowand";
     myDog.OwnerLastName = "Behold";
+    myDog.Breed = "BloodHound";
     DisplayMyPet(myDog);
 }
 catch(Exception ex)
@@ -47,7 +48,7 @@ static void DisplayMyPet(Dog myDog)
 {
     //Dog instance contains the data value No.
     //Console.WriteLine($"The dog belonging to {myDog.GetFullName()} is called {myDog.GetName()}"); //using methods
-    Console.WriteLine($"The dog belonging to {myDog.FullName} is called {myDog.GetName()}"); //using properties
+    Console.WriteLine($"The dog belonging to {myDog.FullName} is a {myDog.Breed} called {myDog.GetName()}"); //using properties
     //Console.WriteLine($"My dog is {myDog.GetAge()} years old.");
     Console.WriteLine($"My dog is {myDog.Age} years old."); //this makes use of a property
                                                             //the system recognizes that the property is not
