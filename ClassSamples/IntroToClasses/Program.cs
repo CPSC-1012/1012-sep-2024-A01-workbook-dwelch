@@ -7,14 +7,17 @@ Console.WriteLine("\n\tHello, World of Classes\n!");
 //the class standard for coding classes will be
 //  each class defintion will be coding in a separate phyiscal file
 
-Dog myDog = null;
+Dog myDog = null; //objects are reference variables
 Cat myCat = null;
 
 //create an instance of the class definition Dog
 //the instance is the object of the class
 //you may have as many instances of a class as you wish, each
 //  is unique, each holds its own values of the characteristics
-myDog = new Dog();
+
+//if your class definition does NOT have a constructor code within it
+//  the call to create your instance is typically referred to as the : system constructor
+myDog = new Dog(); 
 
 //to access an item within a class you will use the dot (.) operator
 //to use something within a other class the "something" needs an
@@ -32,13 +35,26 @@ myDog.Age = 4.5; //this makes use of a property,
 
 try
 {
+    
     myDog.OwnerFirstName = "Lowand";
     myDog.OwnerLastName = "Behold";
     myDog.Breed = "BloodHound";
+    Console.WriteLine("\n\nDog created with default constructor\n");
     DisplayMyPet(myDog);
+
+    Console.WriteLine("\n\nDog created with greedy constructor\n");
+
+    //the constructor Dog(...) is used with the new command to tell the system
+    //  what class instance to create and return to the caller.
+    //NOTE: THE CONSTRUCTION CAN ONLY!!!!!! BE USED WITH THE new command
+    myDog = new Dog("Boo", 13.4, "Charity", "Kase", "Mixed");
+    DisplayMyPet(myDog);
+
+
 }
 catch(Exception ex)
 {
+    
     Console.WriteLine($"Class data error: {ex.Message}");
 }
 
