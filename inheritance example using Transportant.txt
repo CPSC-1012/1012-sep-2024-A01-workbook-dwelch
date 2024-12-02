@@ -1,0 +1,87 @@
+using System;
+
+// Base class
+class Transportation
+{
+    public string Name { get; set; }
+    public int Capacity { get; set; } // Number of passengers or cargo capacity
+
+    public Transportation(string name, int capacity)
+    {
+        Name = name;
+        Capacity = capacity;
+    }
+
+    public virtual string Describe()
+    {
+        return $"{Name} can transport {Capacity} passengers or equivalent cargo.";
+    }
+}
+
+// Child class for water transportation
+class WaterTransportation : Transportation
+{
+    public string TypeOfVessel { get; set; } // e.g., "boat", "ship", "submarine"
+    public bool Powered { get; set; } 
+
+    public WaterTransportation(string name, int capacity, string typeOfVessel, bool powered)
+        : base(name, capacity)
+    {
+        TypeOfVessel = typeOfVessel;
+	Powered = powered
+    }
+
+    public override string Describe()
+    {
+        return $"{Name} is a {TypeOfVessel} that can transport {Capacity} passengers or equivalent cargo over water. Powered: {Powered}";
+    }
+}
+
+// Child class for land transportation
+class LandTransportation : Transportation
+{
+    public int NumberOfWheels { get; set; }
+
+    public LandTransportation(string name, int capacity, int numberOfWheels)
+        : base(name, capacity)
+    {
+        NumberOfWheels = numberOfWheels;
+    }
+
+    public override string Describe()
+    {
+        return $"{Name} is a land vehicle with {NumberOfWheels} wheels, carrying {Capacity} passengers or cargo.";
+    }
+}
+
+// Child class for air transportation
+class AirTransportation : Transportation
+{
+    public string TypeOfAircraft { get; set; } // e.g., "helicopter", "airplane"
+
+    public AirTransportation(string name, int capacity, string typeOfAircraft)
+        : base(name, capacity)
+    {
+        TypeOfAircraft = typeOfAircraft;
+    }
+
+    public override string Describe()
+    {
+        return $"{Name} is an {TypeOfAircraft} that can transport {Capacity} passengers or equivalent cargo through the air.";
+    }
+}
+
+// Example usage
+class Program
+{
+    static void Main(string[] args)
+    {
+        WaterTransportation boat = new WaterTransportation("Ferry", 200, "boat");
+        LandTransportation car = new LandTransportation("Sedan", 5, 4);
+        AirTransportation plane = new AirTransportation("Boeing 747", 416, "airplane");
+
+        Console.WriteLine(boat.Describe());
+        Console.WriteLine(car.Describe());
+        Console.WriteLine(plane.Describe());
+    }
+}

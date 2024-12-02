@@ -5,7 +5,9 @@ VisualStudioVersion = 17.8.34408.163
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntroToClasses", "IntroToClasses\IntroToClasses.csproj", "{266F6FFE-22FA-4199-9FE8-C13C870E5D5D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayAndLists", "ArrayAndLists\ArrayAndLists.csproj", "{56E9236F-4923-45AE-B21F-0427A5F9A4FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArrayAndLists", "ArrayAndLists\ArrayAndLists.csproj", "{56E9236F-4923-45AE-B21F-0427A5F9A4FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompositeClassess", "CompositeClassess\CompositeClassess.csproj", "{12E37883-FDFF-4074-8B6F-5F759C7EAB1F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{56E9236F-4923-45AE-B21F-0427A5F9A4FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56E9236F-4923-45AE-B21F-0427A5F9A4FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56E9236F-4923-45AE-B21F-0427A5F9A4FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12E37883-FDFF-4074-8B6F-5F759C7EAB1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12E37883-FDFF-4074-8B6F-5F759C7EAB1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12E37883-FDFF-4074-8B6F-5F759C7EAB1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12E37883-FDFF-4074-8B6F-5F759C7EAB1F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
