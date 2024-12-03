@@ -32,7 +32,7 @@ namespace CompositeClassess
         //  assign an initial instance to the List
         //  AND this list will be empty BUT it will list
         //without the assignment the List<T> is null
-        List<Stay> Visits { get; set; } = new List<Stay>();
+        public List<Stay> Visits { get; set; } = new List<Stay>();
 
         public void SetName(string name)
         {
@@ -119,7 +119,7 @@ namespace CompositeClassess
             Visits = new List<Stay>(); //can possible assign empty instance of
                                        // List BUT it will NOT be null 
         }
-        public Dog(string name, double age, Owner owner, string breed)
+        public Dog(string name, double age, string breed, Owner owner)
         {
             if (Age < 0)
             {

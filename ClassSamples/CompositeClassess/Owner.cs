@@ -20,12 +20,20 @@ namespace CompositeClassess
         public string LastName { get; set; }
         public string Phone { get; set; }
 
+        public Owner()
+        {
+            //this default constructor is required BECAUSE the Program.cs
+            //  driver is demonstrating object initialization
+            //Object initialization REQIUIRES the class defintion to have
+            //  a default constructor
+        }
+
         public Owner(string firstname, string lastname, string phone)
         {
             //if you are using auto-implmented properties
             //  AND still need to do some validation THEN the
             //  validation needs to be coded elsewher in your class
-            if (string.IsNullOrWhiteSpace(FirstName))
+            if (string.IsNullOrWhiteSpace(firstname))
             {
                 throw new Exception("Missing value for first name");
             }
